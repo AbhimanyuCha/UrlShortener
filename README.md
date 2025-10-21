@@ -107,7 +107,12 @@ CORS_ORIGIN=*
 The service includes Docker configuration for easy deployment:
 
 ```bash
-docker-compose up -d
+docker-compose up --build
+```
+
+Cleanup
+```bash
+docker-compose down -v
 ```
 
 ## Key Improvements
