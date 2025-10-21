@@ -19,4 +19,4 @@ EXPOSE 8080
 
 # Define the command to run the application
 # This is the command that gets executed when the container starts
-CMD [ "node", "src/server.js" ]
+CMD [ "npm", "run", "dev" ]
