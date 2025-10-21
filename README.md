@@ -8,23 +8,23 @@ The service has been refactored into a modular architecture for better maintaina
 
 ```
 src/
-├── config/           # Configuration management
-│   └── index.js      # Environment variables and constants
-├── database/         # Database layer
-│   └── connection.js # PostgreSQL connection pool
-├── cache/           # Caching layer
+├── config/            # Configuration management
+│   └── index.js       # Environment variables and constants
+├── database/          # Database layer
+│   └── connection.js  # PostgreSQL connection pool
+├── cache/             # Caching layer
 │   └── redisClient.js # Redis client management
-├── services/        # Business logic services
+├── services/          # Business logic services
 │   ├── bloomFilter.js # Bloom filter service
 │   └── urlService.js  # URL shortening business logic
-├── routes/          # API routes
-│   └── urlRoutes.js  # URL-related endpoints
-├── middleware/      # Express middleware
-│   └── index.js     # CORS, logging, error handling, rate limiting
-├── utils/          # Utility functions
-│   └── urlUtils.js  # URL validation, base62 encoding
-├── server.js       # Server setup and initialization
-└── index.js        # Application entry point
+├── routes/            # API routes
+│   └── urlRoutes.js   # URL-related endpoints
+├── middleware/        # Express middleware
+│   └── index.js       # CORS, logging, error handling, rate limiting
+├── utils/             # Utility functions
+│   └── urlUtils.js    # URL validation, base62 encoding
+├── server.js          # Server setup and initialization
+└── index.js           # Application entry point
 ```
 
 ## Features
