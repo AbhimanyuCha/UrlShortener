@@ -13,7 +13,7 @@ services:
       - ./db_init:/docker-entrypoint-initdb.d 
       # 2. Add the persistent volume
       - postgres_data:/var/lib/postgresql/data 
-    healthcheck: # <-- ADD THIS BLOCK
+    healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
       timeout: 5s
@@ -31,7 +31,7 @@ services:
       - "8080:8080"
     environment:
       # DB Configuration
-      DB_HOST: db            # Use the service name defined in this file
+      DB_HOST: db
       DB_PORT: 5432          # Container port (not the host mapped one)
       DB_USER: postgres
       DB_PASSWORD: postgres
@@ -39,7 +39,7 @@ services:
       # Redis Configuration
       REDIS_HOST: redis      # Use the service name defined in this file
       REDIS_PORT: 6379
-    depends_on: # <-- CHANGE THIS BLOCK
+    depends_on: 
       db:
         condition: service_healthy # Wait until the DB is truly ready
       redis:
